@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logn In!</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #B9D5E6; 
+            color: #475E3D; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+
+        .welcome-section {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 350px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2C3E20;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        label {
+            color: #475E3D;
+            text-align: left;
+            display: block;
+            margin: 5px;
+        }
+
+        button {
+            background-color: #ffffff; 
+            color: #475E3D; 
+            border: 2px solid #475E3D; 
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #475E3D; 
+            color: #ffffff;
+        }
+
+        .link {
+            color: #2C3E20;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link a {
+            color: #475E3D;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-section">
+        <h1>Log In</h1>
+        <form action="/submit-login" method="post">
+            <input type="text" placeholder="Username or Email" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <div>
+                <input type="checkbox" id="keep-logged-in">
+                <label for="keep-logged-in">Keep me logged in</label>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="link">
+                <a href="#">Forgot username?</a> | <a href="#">Forgot password?</a>
+            </div>
+            <div class="link">
+                <a href="#">Can't log in?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

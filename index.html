@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #B9D5E6; 
+            color: #475E3D; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh; 
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        .welcome-section {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            color: #2C3E20; 
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ffffff; 
+            color: #000000; 
+            border: 2px solid #475E3D; 
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #475E3D; 
+            color: #ffffff; 
+        }
+
+        .button-container {
+            text-align: center;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to the Purdue Dining App</h1>
+            <div class="image-container">
+                <img src="images/food.jpg" alt="Delicious Food">
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button onclick="navigateTo('logIn.html')">Log In</button>
+        <button onclick="navigateTo('createAccount.html')">Create Account</button>
+    </div>
+    
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
+
+
